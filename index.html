@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My First Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Toggle Theme Button -->
+  <button id="theme-toggle">🌓</button>
+
+  <div class="hero" data-aos="fade-down">
+    <img src="toto.jpg" class="profile" />
+    <h1>Hello, I'm Bazz 👋</h1>
+    <p>This is my first website 🚀</p>
+    <a href="https://github.com/bazzOndehere" target="_blank" class="btn">GitHub</a>
+  </div>
+
+  <section class="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m currently learning HTML, CSS, and how to build modern websites step by step.</p>
+  </section>
+
+  <section class="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div id="project-list">
+      <div class="card">
+        <h3>My First Web</h3>
+        <p>A simple landing page based on Figma design.</p>
+      </div>
+      <!-- Project cards from JS will appear here -->
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 BestiDev. Built with 💻 and Semangat ✨</p>
+  </footer>
+
+  <!-- JS Libs + Custom Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Dark mode toggle
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+
+    // Add project cards dynamically
+    const projects = [
+      { title: 'Calculator App', desc: 'A simple calculator built with vanilla JS.' },
+      { title: 'Todo List', desc: 'Basic todo app with localStorage.' },
+      { title: 'Portfolio Page', desc: 'Personal portfolio using responsive design.' }
+    ];
+
+    const container = document.getElementById('project-list');
+    projects.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `<h3>${p.title}</h3><p>${p.desc}</p>`;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
