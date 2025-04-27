@@ -1,25 +1,13 @@
-/* Global Style */
 body {
   font-family: sans-serif;
   background: #f0f0f0;
   padding: 2rem;
   text-align: center;
-  margin: 0;
 }
 
-/* Style Foto Biar BULAT */
-img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-/* Animasi Judul */
+/* Animasi untuk judul */
 h1 {
   color: #2c3e50;
-  font-size: 2rem;
   animation: fadeInDown 1s ease;
 }
 
@@ -35,23 +23,15 @@ h1 {
   }
 }
 
-/* Style Teks */
 p {
   color: #34495e;
   margin-top: 1rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
 }
 
-/* Responsive untuk HP */
+/* Responsive Mobile View */
 @media (max-width: 600px) {
   body {
     padding: 1rem;
-  }
-
-  img {
-    width: 150px;
-    height: 150px;
   }
 
   h1 {
@@ -60,6 +40,5 @@ p {
 
   p {
     font-size: 1rem;
-    line-height: 1.4;
   }
 }
